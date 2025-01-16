@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "cdk debug",
+            "skip": [
+                "<node_internals>/**"
+            ],
+            "runtimeArgs": [
+                "-r", "./node_modules/ts-node/register/transpile-only"
+            ],
+            "args": [
+                "${workspaceFolder}/bin/recording-analysis.ts"
+            ],
+            "env": {
+                "NODE_ENV": "Sandbox",
+                "CODE_MODE": "ONLY_SANDBOX",
+                "BRANCH": "feature",
+                "CDK_DEFAULT_REGION": "us-east-1"
+            }
+        }
+    ]
+}
