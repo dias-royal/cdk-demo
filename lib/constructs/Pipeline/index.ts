@@ -36,7 +36,7 @@ export class CICDPipeline extends Construct {
                     }),
                     commands:[
                         'npm ci',
-                        'npx cdk synth'
+                        'cdk synth'
                     ],
                     primaryOutputDirectory: 'cdk.out',
             })
