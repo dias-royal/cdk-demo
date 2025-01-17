@@ -27,6 +27,7 @@ export class CICDPipeline extends Construct {
                 }),
                 commands: [
                     'npm ci',
+                    'npm run build',
                     'npm run cdk:synth'
                 ],
                 primaryOutputDirectory: 'cdk.out',
