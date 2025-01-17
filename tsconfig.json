@@ -26,6 +26,10 @@
       "./node_modules/@types"
     ]
   },
+  "include": [
+    "src/**/*.ts",
+    "custom.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "cdk.out"
