@@ -1,26 +1,21 @@
-import * as dotenv from 'dotenv'
-import path = require('path');
-import config from "../recording-analysis/config.json";
+import config from '../recording-analysis/config.json';
 
-const env = `./env.${process.env.NODE_ENV}`
-dotenv.config({path: path.resolve(__dirname, env)});
-
-export type ConfigProps = {
-    BRANCH: string,
-    NODE_ENV: string,
-    PROJECT_NAME: string,
-    GIT_OWNER: string,
-    GIT_REPO: string,
-    GIT_TOKEN_NAME: string
+export interface ConfigProps {
+  BRANCH: string;
+  NODE_ENV: string;
+  PROJECT_NAME: string;
+  GIT_OWNER: string;
+  GIT_REPO: string;
+  GIT_TOKEN_NAME: string;
 }
 
 export const getConfig = (): ConfigProps => {
-    return {
-        BRANCH: process.env.BRANCH || 'development',
-        NODE_ENV: process.env.NODE_ENV || '',
-        PROJECT_NAME: config.project_config.project_name,
-        GIT_OWNER: config.project_config.git_owner,
-        GIT_REPO: config.project_config.git_repo,
-        GIT_TOKEN_NAME: config.project_config.git_token_name
-    }
-}
+  return {
+    BRANCH: process.env.BRANCH || 'development',
+    NODE_ENV: process.env.NODE_ENV || 'development',
+    PROJECT_NAME: process.env.PROJECT_NAME || 'my-project',
+    GIT_OWNER: process.env.GIT_OWNER || 'my-git-owner',
+    GIT_REPO: process.env.GIT_REPO || 'my-git-repo',
+    GIT_TOKEN_NAME: process.env.GIT_TOKEN_NAME || 'my-git-token-name',
+  };
+};
