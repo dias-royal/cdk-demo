@@ -16,7 +16,6 @@
             ],
             "env": {
                 "NODE_ENV": "Sandbox",
-                "CODE_MODE": "ONLY_SANDBOX",
                 "BRANCH": "feature",
                 "CDK_DEFAULT_REGION": "us-east-1"
             }

@@ -8,7 +8,10 @@ dotenv.config({path: path.resolve(__dirname, env)});
 export type ConfigProps = {
     BRANCH: string,
     NODE_ENV: string,
-    PROJECT_NAME: string
+    PROJECT_NAME: string,
+    GIT_OWNER: string,
+    GIT_REPO: string,
+    GIT_TOKEN_NAME: string
 }
 
 export const getConfig = (): ConfigProps => {
@@ -16,5 +19,8 @@ export const getConfig = (): ConfigProps => {
         BRANCH: process.env.BRANCH || '',
         NODE_ENV: process.env.NODE_ENV || '',
         PROJECT_NAME: config.project_config.project_name,
+        GIT_OWNER: config.project_config.git_owner,
+        GIT_REPO: config.project_config.git_repo,
+        GIT_TOKEN_NAME: config.project_config.git_token_name
     }
 }
