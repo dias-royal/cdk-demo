@@ -1,7 +1,7 @@
 {
     "project_config": {
         "project_name": "RecordAnalysis",
-        "git_owner": "rcg-enterprise",
+        "git_owner": "dias-royal",
         "git_repo": "cdk-demo",
         "git_token_name": "GIT_TOKEN"
     }
