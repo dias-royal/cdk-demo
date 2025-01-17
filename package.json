@@ -9,6 +9,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
+    "cdk:synth": "cdk synth",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "cdk:sandbox": "cross-env NODE_ENV=Sandbox CDK_MODE=ONLY_SANDBOX cdk deploy --profile sandbox",
