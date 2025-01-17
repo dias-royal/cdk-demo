@@ -8,6 +8,8 @@
       "es2020",
       "dom"
     ],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
