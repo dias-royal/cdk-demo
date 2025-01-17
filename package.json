@@ -13,7 +13,7 @@
     "format:check": "prettier --check .",
     "cdk:sandbox": "cross-env NODE_ENV=Sandbox CDK_MODE=ONLY_SANDBOX cdk deploy --profile sandbox",
     "cdk:development": "cross-env NODE_ENV=Development CDK_MODE=ONLY_DEVELOPMENT cdk deploy --profile sandbox",
-    "cdk:pipeline": "cross-env NODE_ENV=sandbox CDK_MODE=ONLY_PIPELINE cdk deploy --profile sandbox"
+    "cdk:pipeline": "cross-env NODE_ENV=Development CDK_MODE=ONLY_PIPELINE cdk deploy --profile sandbox"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.147",

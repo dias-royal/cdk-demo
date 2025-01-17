@@ -16,7 +16,7 @@ export type ConfigProps = {
 
 export const getConfig = (): ConfigProps => {
     return {
-        BRANCH: process.env.BRANCH || '',
+        BRANCH: process.env.BRANCH || 'development',
         NODE_ENV: process.env.NODE_ENV || '',
         PROJECT_NAME: config.project_config.project_name,
         GIT_OWNER: config.project_config.git_owner,
